@@ -1,0 +1,122 @@
+-----------------------------------------------------------------
+--------------------------VIM------------------------------------
+-----------------------------------------------------------------
+
+VIM tiene 5 modos:
+1. Modo normal, <<esc>>
+2. Modo inserccion, <<i>>
+3. Modo visual, <<v>>
+4. Modo visualizacion, acceder con <<view>>
+5. Modo comando, <<:>>
+
+-----------------------------------------------------------------
+GUARDADO:
+:w -> Guarda el fichero.
+:q -> Salir de Vim sin no se ha modificado el fichero.
+:q!
+:wq -> Se guarda y se cierra Vim.
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+PERSONALIZACION
+:set number -> Aparecen los numeros de las lineas
+:set number! -> Desaparecen los numero de las lineas
+Ctrl g -> Datos del fichero en la parte inferior del mismo
+:set cursorcolumn -> Muestra columna (util para identacion)
+:set nocursorcolumn -> Elimina el cursor columna
+:set cursorline -> Muestra linea cercana a columna
+:set nocursorline -> Elimina el cursor linea
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+MOVIMIENTO:
+h -> Izquierda
+j -> Abajo
+k -> Arriba
+l -> Derecha
+gg -> Ir al principio del fichero
+G -> Ir al final del fichero
+w -> Avanzar de palabra en palabra (de principio en principio) 
+e -> Avanzar de palabra en palabra (de final en final)
+b -> Retroceder de palabra en palabra 
+$ -> Ir a final de linea 
+0 -> Ir a comienzo de linea 
+f<<c>> -> Va al caracter c en la misma linea hacia la derecha
+F<<c>> -> Va al caracter c en la misma linea hacia la izquierda
+t<<c>> -> Va hacia el caracter anterior al caracter c en la misma linea (derecha)
+T<<c>> -> Va hacia el caracter anterior al caracter c en la misma linea (izquierda)
+<<num_linea>> G -> Ir a la linea num_linea
+:<<num_linea>> -> Ir a la linea num_linea
+Ctrl e -> Bajar linea a linea el fichero
+Ctrl y -> Subir linea a linea el fichero
+Ctrl d -> Bajar de 20 en 20 lineas en el fichero
+Ctrl u -> Subir de 20 en 20 lineas en el fichero
+{ -> Se mueve hacia arriba por cada linea vacia
+} -> Se mueve hacia abajo por cada linea vacia
+-------------------------------------------------------------------
+
+-------------------------------------------------------------------
+INSERCION
+a -> Entra en modo insercion a partir de un caracter a la izquierda
+A -> Entra en modo insercion al final de linea (RECOMENDADO)
+I -> Entra en modo insercion al principio de la linea
+o -> Entra en modo insercion en una nueva linea debajo de donde estes
+O -> Entra en modo insercion en una nueva linea arriba de donde estes
+-------------------------------------------------------------------
+
+-------------------------------------------------------------------
+SUPRIMIR
+x -> Borrar hacia la derecha (suprimir)
+dw -> Suprimir una palabra completa
+d<<num>>w -> Suprimir num palabras
+<<num>>dw -> Suprimir num veces una palabra
+<<num>>d<<num'>>w -> Suprimir num veces num' palabras
+diw -> Elimina la palabra sobre la que se este
+d$ -> Suprimir hasta el final de linea
+<<num>>dd -> Suprimir num lineas
+dG -> Suprimir hasta final de fichero
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+DESHACER Y REEMPLAZAR
+u -> Revierte la ultima modificacion
+U -> Revierte todas las modificaciones de la linea actual
+<<num>>r -> Reemplaza num caracteres a partir de la posicion del cursor
+cw -> Reemplaza una palabra
+c$ -> Reemplaza el resto de la linea sobre la que este situado el cursor
+R -> Establece el modo de reemplazo para hacer sustituciones de forma ilimitada
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+BUSCAR TEXTO
+/<<palabra>> -> Buscar palabra a partir del cursor hasta el final del archivo
+?<<palabra>> -> Buscar palabra desde el cursor hasta el principio del archivo
+n -> Buscar la siguiente coincidencia en el fichero
+N -> Buscar la anterior coincidencia en el fichero
+f -> Buscar un caracter
+% -> Buscar parentesis
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+CORTAR, COPIAR, PEGAR
+yy -> Copiar linea sobre la que esta el cursor
+dd -> Cortar linea y guardarla en el portapapeles
+p -> Pegar en la linea donde se situa el cursor
+P -> Pegar en la linea superior donde se situa el cursor
+y -> Copiar en el modo visual
+d -> Cortar en el modo visual
+p -> Pegar en el modo visual
+P -> Pegar antes de en el modo visual
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+ESPECIALES
+. -> Repite el ultimo comando ejecutado
+J -> Junta la linea inferior con la linea actual
+:help -> Abre la ventana de ayuda
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+FICHERO EDICION
+/etc/vim/vimrc
+----------------------------------------------------------------------
