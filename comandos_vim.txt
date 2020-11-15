@@ -120,3 +120,33 @@ J -> Junta la linea inferior con la linea actual
 FICHERO EDICION
 /etc/vim/vimrc
 ----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+PLUGINS
+~/.vim/pack/externo/start -> Plugins de carga automatica
+~/.vim/pack/externo/opt -> Plugins de carga manual 
+:packadd <<nombre_plugin>> -> Comando para plugin manual
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+NERDTree
+:NERDTree -> Para abrir el arbol de directorios
+Ctrl ww -> Recorre todas las ventanas
+Ctrl wh -> Ventana de la izquierda
+Ctrl wj -> Ventana de abajo
+Ctrl wk -> Ventana de arriba
+Ctrl wl -> Ventana de la derecha
+i -> Abre ventana horizontal
+s -> Abre ventana vertical
+:NERDTreeToggle -> Cierra arbol de archivos y se mantiene en el fichero
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+EXTRA CONFIGURACION
+filetype plugin indent on
+set tabstop=4
+set shiftwidht=4
+set expandtab ts=4 sw=4 ai
+highlight Normal ctermfg=black ctermbg=white
+----------------------------------------------------------------------
+
