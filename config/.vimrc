@@ -13,17 +13,37 @@ set noshowmode
 
 call plug#begin('~/.vim/plugged')
 
+" Syntax
+Plug 'sheerun/vim-polyglot'
+
+" Status bar
+Plug 'maximbaz/lightline-ale'
+Plug 'itchyny/lightline.vim'
+
 " Themes
 Plug 'morhetz/gruvbox'
+Plug 'kyoz/purify', { 'rtp': 'vim'}
+
+" Typing
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
+
+" Autocomplete
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " IDE
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'yggdroot/indentline'
 call plug#end()
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+syntax on
+colorscheme purify
+" let g:gruvbox_contrast_dark = "hard"
+let g:airline_theme='purify'
 let NERDTreeQuitOnOpen=1
 
 let mapleader=" "
@@ -33,3 +53,6 @@ nmap <Leader>nt :NERDTreeFind<CR>
 
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+
+" Configuration coc file
+" source ~/config/coc.nvim
